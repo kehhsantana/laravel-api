@@ -61,7 +61,7 @@ Para testar a aplicação a URL disponível é localhost:8080/api/transaction, e
 
 ###### Notificação: 
 
-Para a notificação é necessário entrar no container do php-fpm e rodar executar: php artisan queue:work. Isso fará com que a fila comece a processar, caso der certo terá registros na tabela de jobs e notifications. Caso contrário, após as tentativas informadas no Jobs ele irá inserir registros na failed_jobs.
+Para a notificação é necessário entrar no container do php-fpm e executar: php artisan queue:work. Isso fará com que a fila comece a processar e caso der certo terá registros na tabela de jobs e notifications. Caso contrário, após as tentativas informadas no Jobs ele irá inserir registros na failed_jobs.
 
 
 
