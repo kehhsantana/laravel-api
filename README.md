@@ -23,7 +23,7 @@ Para acessar o BD pelo seu client local é necessário entrar com o host: 172.0.
 
 Para rodar as migrations, ainda no container do php-fpm, execute: php artisan migrate
 
-Para popular o banco com as seeds: php artisan migrate
+Para popular o banco com as seeds: php artisan db:seed
 
 ## Modelagem banco de dados:
 
