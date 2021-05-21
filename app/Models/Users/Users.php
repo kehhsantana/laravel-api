@@ -3,8 +3,8 @@
 namespace App\Models\Users;
 
 use App\Models\Users\UsersRelations;
-use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class Users extends Authenticatable 
 {
@@ -13,7 +13,7 @@ class Users extends Authenticatable
 
     protected $table = 'users';
     protected $primaryKey = 'id';
-    public $timestamp = false;
+    public $timestamps = false;
 
     protected $fillable = [
         'first_name', 
@@ -27,16 +27,6 @@ class Users extends Authenticatable
 
     protected $hidden = [
         'password',
-    ];
+    ];    
 
-    //public function getJWTIdentifier()
-    //{
-    //  return $this->getKey();
-    //}
-
-    //public function getJWTCustomClaims()
-    //{
-    //    return [];
-    //}
-    
 }
