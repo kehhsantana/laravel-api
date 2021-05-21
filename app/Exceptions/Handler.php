@@ -3,6 +3,7 @@
 namespace App\Exceptions;
 
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use App\Exceptions\CustomExceptions;
 use Throwable;
 
 class Handler extends ExceptionHandler
@@ -13,7 +14,7 @@ class Handler extends ExceptionHandler
      * @var array
      */
     protected $dontReport = [
-        //
+        CustomExceptions::class
     ];
 
     /**
@@ -50,6 +51,13 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Throwable $exception)
     {
+        if ($exception instanceof CustomExceptions) {
+            return response()->json([
+                "code" => $exception->getCustomCode(),
+                'message' => $exception->getMessage()
+            ], $exception->getCode());
+        }
+
         return parent::render($request, $exception);
     }
 }
