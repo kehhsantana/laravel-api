@@ -35,7 +35,7 @@ class TransactionController extends Controller
             } 
             
             return response()->json([
-                'message' => 'Transação autorizada',
+                'message' => 'Transação concluída',
                 'transaction' => $transaction
             ], 201);
 
