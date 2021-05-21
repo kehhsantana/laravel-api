@@ -47,7 +47,7 @@ Para testar a aplicação a URL disponível é localhost:8080/api/transaction, e
 
 ```json
 {
-  "message": "Transação autorizada",
+  "message": "Transação concluída",
   "transaction": {
     "id": 1,
     "payer_user_id": 1,
