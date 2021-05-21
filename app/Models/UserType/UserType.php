@@ -6,10 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class UserType extends Model
 {
-
     protected $table = 'user_type';
     protected $primaryKey = 'id';
-    public $timestamp = false;
+    public $timestamps = false;
 
     protected $fillable = [
         'description', 

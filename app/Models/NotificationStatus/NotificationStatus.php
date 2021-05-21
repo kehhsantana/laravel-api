@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Models\TransactionStatus;
+namespace App\Models\NotificationStatus;
 
 use Illuminate\Database\Eloquent\Model;
 
-class TransactionStatus extends Model
+class NotificationStatus extends Model
 {
-    protected $table = 'transaction_status';
+    protected $table = 'notification_status';
     protected $primaryKey = 'id';
     public $timestamps = false;
 

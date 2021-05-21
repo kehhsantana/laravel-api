@@ -2,16 +2,15 @@
 
 namespace App\Models\Transactions;
 
-use App\Models\Transactions\TransactionsRelations;
 use Illuminate\Database\Eloquent\Model;
-
+use App\Models\Transactions\TransactionsRelations;
 class Transactions extends Model
 {
     use TransactionsRelations;
 
     protected $table = 'transactions';
     protected $primaryKey = 'id';
-    public $timestamp = false;
+    public $timestamps = false;
 
     protected $fillable = [
         'payer_user_id',
